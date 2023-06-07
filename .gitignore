@@ -26,6 +26,9 @@ output.json
 *.iml
 .idea/
 misc.xml
+compiler.xml
+vcs.xml
+
 deploymentTargetDropDown.xml
 render.experimental.xml
 
