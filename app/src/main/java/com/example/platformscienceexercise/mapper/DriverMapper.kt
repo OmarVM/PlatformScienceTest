@@ -6,7 +6,10 @@ class DriverMapper : DriverMapperContract<Driver> {
 
     override fun mapToDriver(driverString: String): Driver {
 
+        var counterVowels = 0
+        var counterConsonants = 0
         var counterWhiteSpace = 0
+        val vowelsSet = setOf('a','e','i','o','u','A','E','I','O','U')
         var endWord = false
         val stringName: StringBuilder by lazy { StringBuilder() }
         val stringLastName: StringBuilder by lazy { StringBuilder() }
@@ -16,6 +19,12 @@ class DriverMapper : DriverMapperContract<Driver> {
             if (it.isWhitespace()) {
                 ++counterWhiteSpace
                 endWord = true
+            }
+
+            if (!it.isDigit() && !it.isWhitespace() && vowelsSet.contains(it)) {
+                ++counterVowels
+            } else {
+                ++counterConsonants
             }
 
             when(endWord) {
@@ -31,6 +40,8 @@ class DriverMapper : DriverMapperContract<Driver> {
         return Driver(
             name = stringName.toString(),
             lastName = stringLastName.toString(),
+            vowelsNumber = counterVowels,
+            consonantsNumber = counterConsonants,
             charNumber = driverString.length - counterWhiteSpace
         )
     }
