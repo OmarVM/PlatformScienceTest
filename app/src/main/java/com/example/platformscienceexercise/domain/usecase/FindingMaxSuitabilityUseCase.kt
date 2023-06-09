@@ -49,6 +49,8 @@ class FindingMaxSuitabilityUseCase @Inject constructor(
                 currentShipment,
                 maxSuitability
             ))
+
+            listShipments.remove(currentShipment)
         }
 
         return result
