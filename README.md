@@ -21,3 +21,6 @@ Assumptions:
 
 To solve this, we assumed that the driver list already has the correct priority which means we get the first driver and this one is who going
 to select the first route, once the driver has one route, we remove that item from the list, until the last driver only can get the shipment available.
+
+![Screenshot_20230608_230117](https://github.com/OmarVM/PlatformScienceTest/assets/18560308/be1de100-8af3-4970-81b3-f40c2ddb69a3)
+![Screenshot_20230608_230140](https://github.com/OmarVM/PlatformScienceTest/assets/18560308/adab4b46-860e-44ae-b81a-e6a9869ef6ab)
