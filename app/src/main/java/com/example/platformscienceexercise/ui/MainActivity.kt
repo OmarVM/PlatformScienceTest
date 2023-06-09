@@ -2,7 +2,6 @@ package com.example.platformscienceexercise.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import com.example.platformscienceexercise.databinding.ActivityMainBinding
 import com.example.platformscienceexercise.domain.viewmodel.MainViewModel
@@ -37,6 +36,8 @@ class MainActivity : AppCompatActivity(), DriversAdapter.OnClickListener {
     }
 
     override fun onClick(item: MaxSuitabilityUI) {
-        Log.d("TAG", "Content: ${item.shipment.address}")
+       DetailsDialogFragment(item).apply {
+            this.show(supportFragmentManager, "detailsDialog" )
+        }
     }
 }

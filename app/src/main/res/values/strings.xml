@@ -3,4 +3,9 @@
     <string name="cd_driver_photo">Driver photo</string>
     <string name="str_name_default">Marvin</string>
     <string name="str_last_name_default">Stravenue</string>
+    <string name="str_full_address"><b>%1$s</b> %2$s</string>
+
+    <string name="str_positive_dialog"> OK </string>
+    <string name="str_max_suitability">Max Suitability: %1$s </string>
+
 </resources>
